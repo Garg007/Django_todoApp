@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+  <div class="container">
+
+  <h2 style="color:grey;">Show Todos</h2><hr><br><br><br><br>
+  <div class="form-group">
+
+  <label class="control-label col-sm-2"></label>
+  <div class="col-sm-8">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for todo in todos %}
+      <tr>
+          <td>{{todo.id}}</td>
+          <td><a href="/todo/details/{{todo.id}}" >{{todo.title}} </a></td>
+          <td>{{todo.text}}</td>
+      </tr>
+    </tbody>
+
+    {% endfor %}
+  </table>
+</div>
+  <label class="control-label col-sm-2"></label>
+  </div>
+  </div>
+
+
+{% include 'footer.html' %}

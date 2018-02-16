@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+
+<div class="container">
+
+  <h2 style="color:grey;">Details {{todo.title}}</h2><hr><br><br><br><br>
+  <div class="form-group">
+
+  <label class="control-label col-sm-1"></label>
+  <div class="col-sm-10">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Create At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.text}}</td>
+        <td>{{todo.create_at}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<label class="control-label col-sm-1"></label>
+</div>
+</div>
+{% include 'footer.html' %}

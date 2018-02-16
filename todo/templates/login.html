@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+
+<div class="container">
+    <h2 style="color:grey;"><center>Sign In To Your Account</center></h2><br><br><br><br>
+    <form name="LoginForm" action="" method="post">
+        {% csrf_token %}
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}" />
+        {% endif %}
+
+        <div class="form-group">
+            <label class="control-label col-sm-1"></label>
+            <label class="control-label col-sm-2">USERNAME:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="username" placeholder="Enter Username.." name="username" required="">
+            </div>
+            <label class="control-label col-sm-3"></label>
+        </div></br><br>
+
+        <div class="form-group">
+            <label class="control-label col-sm-1"></label>
+            <label class="control-label col-sm-2">PASSWORD:</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" id="password" placeholder="Enter Password.." name="password" required="">
+            </div>
+            <label class="control-label col-sm-3"></label>
+            </div></br><br>
+
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-6">
+                <button type="submit" class="btn btn-success ">Login</button>
+            </div>
+        </div>
+
+
+    </form><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+
+{% include 'footer.html' %}
